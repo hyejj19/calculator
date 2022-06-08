@@ -1,0 +1,131 @@
+@font-face {
+  font-family: 'SUIT-Medium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2')
+    format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: 'SUIT-Medium';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(182, 173, 173);
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 0.8fr 0.9fr repeat(5, 1fr);
+  grid-gap: 1.2rem;
+
+  background-color: #ececee;
+  border-radius: 0.7rem;
+  height: 43rem;
+  width: 25rem;
+  padding: 2rem;
+
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.logo {
+  grid-column: 1 / span 4;
+  grid-row: 1 / 2;
+
+  display: flex;
+  align-items: flex-end;
+
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.input--wrapper {
+  grid-column: 1 / span 4;
+  grid-row: 2 / 3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+  background-color: #b8b7bd;
+
+  box-shadow: rgba(0, 0, 0, 0.15) 1px 1px 1px 1px inset;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  background-color: #878875;
+  width: 100%;
+  height: 100%;
+  padding: 0.2rem 0.8rem;
+  font-size: 2.6rem;
+  font-stretch: condensed;
+
+  box-shadow: rgba(0, 0, 0, 0.08) 2px 3px 1px 1px inset;
+}
+
+.keypads {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: white;
+  font-size: 1.3rem;
+  border-radius: 50%;
+  color: #0a0908;
+
+  box-shadow: rgba(0, 0, 0, 0.02) 1px 5px 3px 1px,
+    rgba(27, 31, 35, 0.15) 0px 2px 1px 1px;
+
+  transition: all 0.1s;
+  cursor: pointer;
+}
+
+.keypads:hover {
+  background-color: #e6e6e6;
+}
+
+/* 키 예외 */
+.key--clear {
+  background-color: #d1281b;
+  color: black;
+}
+.key--clear:hover {
+  background-color: #f91504;
+}
+
+.key--equals {
+  background-color: #f2b90c;
+  color: black;
+}
+.key--equals:hover {
+  background-color: #ffd500;
+}
+
+.key--function {
+  color: #477934;
+}
+.key--function:hover {
+  background-color: #477934;
+  color: white;
+}
+
+/* 예외 끝 */
